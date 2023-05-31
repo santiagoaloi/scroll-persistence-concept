@@ -30,6 +30,7 @@
 ## Relevant files
 
 <!-- prettier-ignore -->
+```
 App (root)
 └─ composables
    └─ vmain-scroll.js
@@ -40,6 +41,7 @@ App (root)
 └─ pages
    └─ homepage
    └─ playground
+```
 
 ## 🚀 CLI commands
 
