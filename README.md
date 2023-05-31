@@ -1,3 +1,5 @@
+/_ eslint-disable _/
+
 ![Vuetify](https://img.shields.io/static/v1?style=flat&message=Vuetify&color=373e47&logo=Vuetify&logoColor=8DD6F9&label=)
 ![Tailwind CSS](https://img.shields.io/static/v1?style=flat&message=Tailwind+CSS&color=373e47&logo=Tailwind+CSS&logoColor=06B6D4&label=)
 ![Vue.js](https://img.shields.io/static/v1?style=flat&message=Vue.js&color=373e47&logo=Vue.js&logoColor=4FC08D&label=)
@@ -25,21 +27,19 @@
 - Auto-import components
 - Custom fonts
 
-## Git commit specification reference
+## Relevant files
 
-- `feat` add new functions
-- `fix` Fix issues/bugs
-- `perf` Optimize performance
-- `style` Change the code style without affecting the running result
-- `refactor` Re-factor code
-- `revert` Undo changes
-- `test` Test related, does not involve changes to business code
-- `docs` Documentation and Annotation
-- `chore` Updating dependencies/modifying scaffolding configuration, etc.
-- `workflow` Work flow Improvements
-- `ci` CICD
-- `types` Type definition
-- `wip` In development
+<!-- prettier-ignore -->
+App (root)
+└─ composables
+   └─ vmain-scroll.js
+└─ layouts
+   └─ default.vue
+└─ stores
+   └─ appStore.js
+└─ pages
+   └─ homepage
+   └─ playground
 
 ## 🚀 CLI commands
 
