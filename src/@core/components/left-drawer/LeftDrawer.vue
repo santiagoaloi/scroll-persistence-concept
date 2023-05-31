@@ -10,7 +10,7 @@
     <VList nav>
       <div class="pa-2 mb-3 flex items-center justify-between">
         <RouterLink to="/">
-          <VImg src="/company_logos/logo.svg" width="150">
+          <VImg cover height="30" src="/company_logos/logo.svg" width="150">
             <template #placeholder>
               <div class="flex h-full items-center justify-center">
                 <VProgressCircular color="grey-lighten-4" indeterminate />
@@ -34,7 +34,7 @@
         :ripple="false"
         active-color="primary"
         prepend-icon="$mdiHomeOutline"
-        title="Dashboard"
+        title="Index"
         to="/"
       />
       <VListItem
@@ -45,9 +45,21 @@
         to="/playground"
       />
     </VList>
+
+    <template #append>
+      <VCard border>
+        <VContainer>
+          <h3>Scroll Position for {{ name }}</h3>
+          <div>{{ scrollPosition.y }}</div>
+        </VContainer>
+      </VCard>
+    </template>
   </VNavigationDrawer>
 </template>
 
 <script setup>
 const rail = ref(false)
+
+const { name } = toRefs(useRoute())
+const { scrollPosition } = useAppStore()
 </script>

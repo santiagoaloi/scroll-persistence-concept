@@ -87,6 +87,7 @@
     "useSlots": true,
     "useTailwindTheme": true,
     "useTheme": true,
+    "useVmainScroll": true,
     "watch": true,
     "watchEffect": true,
     "watchPostEffect": true,

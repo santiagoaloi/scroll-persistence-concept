@@ -9,12 +9,16 @@ export const useAppStore = defineStore('global-application', {
       model: false,
       text: '',
       color: ''
+    },
+    scrollPosition: {
+      y: 9,
+      vmain: {}
     }
   }),
 
   persist: {
     //Persist only currentTheme
-    paths: ['currentTheme']
+    paths: ['currentTheme', 'scrollPosition']
   },
 
   getters: {

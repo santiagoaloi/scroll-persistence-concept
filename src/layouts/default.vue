@@ -2,17 +2,19 @@
   <div>
     <GSnackbar />
     <LeftDrawer />
-    <GAppBar />
-    <VMain scrollable>
+    <GAppBar :title="isScrolling" />
+    <VMain ref="vmain" scrollable>
       <RouterView v-slot="{ Component }">
-        <template v-if="Component">
+        <VContainer fluid>
           <VFadeTransition hide-on-leave>
-            <VContainer fluid>
-              <Component :is="Component" />
-            </VContainer>
+            <Component :is="Component" />
           </VFadeTransition>
-        </template>
+        </VContainer>
       </RouterView>
     </VMain>
   </div>
 </template>
+<script setup>
+const vmain = ref(null)
+const { y, isScrolling } = useVmainScroll(vmain)
+</script>
